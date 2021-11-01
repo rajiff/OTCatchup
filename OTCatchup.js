@@ -48,8 +48,15 @@ const OT_OPERATIONS = {
 
 module.exports = function isValid(stale, latest, otjson) {
   // this is the part you will write!
-
-  let otOperations = JSON.parse(otjson);
+  let otOperations = "";
+  let isValid = false;
+  
+  try {
+    otOperations = JSON.parse(otjson);
+  } catch (ex) {
+    console.log("Exception in parsing JSON ", ex);
+    return isValid;
+  }
 
   // starting positions for the transformation
   let trStr = stale;
@@ -77,7 +84,7 @@ module.exports = function isValid(stale, latest, otjson) {
   // console.log(`Completed applying ${nbrOfOTs} operations to produce [${trStr}]`);
   console.log(`Valid ? ${trStr} == ${latest}`);
 
-  let isValid = (trStr == latest);
+  isValid = (trStr == latest);
 
   return isValid;
 }
