@@ -82,7 +82,7 @@ module.exports = function isValid(stale, latest, otjson) {
   }
 
   // console.log(`Completed applying ${nbrOfOTs} operations to produce [${trStr}]`);
-  console.log(`Valid ? ${trStr} == ${latest}`);
+  // console.log(`Valid ? ${trStr} == ${latest}`);
 
   isValid = (trStr == latest);
 
