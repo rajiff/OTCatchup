@@ -4,7 +4,8 @@
   "description": "Validate series of Transformational operations on a strict and validate if it is in same state as latest string, if not we have not caught up, hence invalid",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha OTCatchup.spec.js"
+    "test": "./node_modules/.bin/mocha OTCatchup.spec.js",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
