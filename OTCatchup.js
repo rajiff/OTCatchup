@@ -64,7 +64,7 @@ module.exports = function isValid(stale, latest, otjson) {
 
   let nbrOfOTs = 0;
   for(let i=0; i < otOperations.length; i++) {
-    operation = otOperations[i]
+    operation = otOperations[i];
 
     let otClosure = OT_OPERATIONS[operation.op];
     if(otClosure) {
